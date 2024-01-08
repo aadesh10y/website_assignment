@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -21,18 +21,19 @@
         </nav>
 
         <div class="icons">
-            <button aria-label="Search" id="search-btn"><i class="fas fa-search"></i></button>
+            <button aria-label="Search" id="search-btn" class="search-icon"><i class="fas fa-search"></i></button>
+
             <button aria-label="Login" id="login-btn"><i class="fas fa-user"></i></button>
         </div>
 
         <form class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="Search here...">
+            <input type="search" id="search-bar" placeholder="Search here..." class="cancel-symbol">
             <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
         </form>
     </header>
 
     <div class="login-form-container">
-
+        <i class="fas fa-times" id="form-close"></i>
         <form action="">
             <h3>login</h3>
             <input type="email" class="box" placeholder="enter your email">
@@ -44,9 +45,7 @@
             <p>don't have an account? <a href="#">register now</a></p>
 
         </form>
-
     </div>
-
 
     <script src="script.js"></script>
 </body>
