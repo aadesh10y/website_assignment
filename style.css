@@ -30,6 +30,23 @@ section{
     padding:2rem 9%;
 }
 
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+.heading span.space{
+    background: none;
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -288,6 +305,52 @@ header .search-bar-container button:hover {
     background: var(--orange);
 }
 
+/* Additional Styles for League News Sections */
+.league-news {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.league-news h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.league-news article {
+    margin-bottom: 1.5rem;
+}
+
+.league-news article:last-child {
+    margin-bottom: 0;
+}
+
+.league-news a {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.league-news a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the font size for smaller screens */
+@media (max-width: 768px) {
+    .league-news h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .league-news h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
 /* media queries */
 
 @media (max-width:1200px){
@@ -338,5 +401,9 @@ header .search-bar-container button:hover {
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+
+    .heading span{
+        font-size: 2.5rem;
     }
 }
