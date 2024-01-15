@@ -38,3 +38,4 @@ formBtn.addEventListener("click", () => {
 formClose.addEventListener("click", () => {
   loginForm.classList.remove("active");
 });
+
