@@ -305,51 +305,48 @@ header .search-bar-container button:hover {
     background: var(--orange);
 }
 
-/* Additional Styles for League News Sections */
-.league-news {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+main{
+    padding-block: 20px;
+}
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    position: relative;
+    left: 50px;
 }
 
-.league-news h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.league-news article {
-    margin-bottom: 1.5rem;
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
 }
 
-.league-news article:last-child {
-    margin-bottom: 0;
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-.league-news a {
-    color: var(--orange);
-    font-weight: bold;
+.card-content{
+    padding: 12px;
 }
 
-.league-news a:hover {
-    text-decoration: underline;
+.news-source{
+    margin-block: 12px;
 }
-
-/* Adjust the font size for smaller screens */
-@media (max-width: 768px) {
-    .league-news h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 450px) {
-    .league-news h2 {
-        font-size: 1.8rem;
-    }
-}
-
 
 /* media queries */
 
