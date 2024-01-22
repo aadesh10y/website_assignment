@@ -308,17 +308,17 @@ header .search-bar-container button:hover {
 main{
     padding-block: 20px;
 }
-.cards-container{
-    justify-content: space-between;
+.cards-container {
+    display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
+    justify-content: space-between;
     align-items: start;
     position: relative;
     left: 50px;
-}
-
-.card{
-    width: 360px;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); /* Adjust the width based on your layout */
     min-height: 400px;
     box-shadow: 0 0 4px #d4ecff;
     border-radius: 4px;
@@ -326,7 +326,9 @@ main{
     background-color: #fff;
     overflow: hidden;
     transition: all 0.3s ease;
-}
+    margin-bottom: 20px; /* Add some margin between the cards */
+  }
+  
 
 .card:hover{
     box-shadow: 1px 1px 8px #d4ecff;
