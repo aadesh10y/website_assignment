@@ -463,3 +463,63 @@ main{
         font-size: 2.5rem;
     }
 }
+
+.matches-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+}
+
+.team {
+    text-align: center;
+    margin: 0 20px; 
+}
+
+.team-logo {
+    height: 50px; 
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.versus {
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+.match-info {
+    text-align: right;
+}
+
+.match-time {
+    font-size: 16px; 
+    margin-bottom: 5px;
+}
+
+.match-status {
+    color: #fff;
+    background-color: #4CAF50; 
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 14px; 
+}
+
+.match-status.live {
+    background-color: #4CAF50; 
+}
+
