@@ -316,7 +316,7 @@ header .search-bar-container button:hover {
 /* Styling for PL, LALIGA, UCL links */
 .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .hover-link {
@@ -375,7 +375,7 @@ main{
   }
   
   .card {
-    width: calc(33.33% - 20px); /* Adjust the width based on your layout */
+    width: calc(33.33% - 20px);
     min-height: 400px;
     box-shadow: 0 0 4px #d4ecff;
     border-radius: 4px;
@@ -383,7 +383,7 @@ main{
     background-color: #fff;
     overflow: hidden;
     transition: all 0.3s ease;
-    margin-bottom: 20px; /* Add some margin between the cards */
+    margin-bottom: 20px; 
   }
   
 
