@@ -20,11 +20,8 @@ menu.addEventListener("click", () => {
   navbar.classList.toggle('active');
 });
 
-
 searchBtn.addEventListener("click", () => {
   searchBar.classList.toggle("active");
-
-  // Toggle the search and cancel icons using Font Awesome classes
   if (searchBar.classList.contains("active")) {
     searchBtn.innerHTML = '<i class="fas fa-times"></i>';
   } else {
@@ -40,8 +37,8 @@ formClose.addEventListener("click", () => {
   loginForm.classList.remove("active");
 });
 
-videobtn.forEach(btn =>{
-  btn.addEventListener('click', ()=>{
+videobtn.forEach(btn => {
+  btn.addEventListener('click', () => {
     document.querySelector('.controls .active').classList.remove('active');
     btn.classList.add('active');
     let src = btn.getAttribute('data-src');
@@ -51,30 +48,29 @@ videobtn.forEach(btn =>{
 
 const API_KEY = "ac693a0525364bcfba8eec98622884d3";
 const url = "https://newsapi.org/v2/everything?q=";
-window.addEventListener('load', () => fetchFootballNews("Europe"));
+window.addEventListener('load', () => fetchSoccerNews("soccer"));
 
-async function fetchFootballNews() {
-  const query = "football";
+async function fetchSoccerNews(query) {
   const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
   const data = await res.json();
-  console.log(data);
   bindData(data.articles);
 }
 
-
-function bindData(articles){
+function bindData(articles) {
   const cardsContainer = document.getElementById('cards-container');
   const newsCardTemplate = document.getElementById('template-news-card');
 
   cardsContainer.innerHTML = '';
 
-  articles.forEach(article => {
-    if(!article.urlToImage) return;
+  // Limit the number of articles displayed to 4
+  const limitedArticles = articles.slice(0, 9);
+
+  limitedArticles.forEach(article => {
+    if (!article.urlToImage) return;
     const cardClone = newsCardTemplate.content.cloneNode(true);
     fillDataInCard(cardClone, article);
     cardsContainer.appendChild(cardClone);
   });
-
 }
 
 function fillDataInCard(cardClone, article) {
@@ -94,6 +90,38 @@ function fillDataInCard(cardClone, article) {
   newsSource.innerHTML = `${article.source.name} · ${date}`;
 
   cardClone.firstElementChild.addEventListener("click", () => {
-      window.open(article.url, "_blank");
+    window.open(article.url, "_blank");
   });
 }
+
+let curSelectedNav = null;
+function onNavItemClick(id) {
+  let query = '';
+  switch (id) {
+    case 'PL':
+      query = 'Premier League';
+      break;
+    case 'LALIGA':
+      query = 'La Liga';
+      break;
+    case 'UCL':
+      query = 'UEFA Champions League';
+      break;
+  }
+  fetchSoccerNews(query);
+  const navItem = document.getElementById(id);
+  curSelectedNav?.classList.remove("active");
+  curSelectedNav = navItem;
+  curSelectedNav.classList.add("active");
+}
+
+const searchButton = document.getElementById("search-button");
+const searchText = document.getElementById("search-text");
+
+searchButton.addEventListener("click", () => {
+  const query = searchText.value;
+  if (!query) return;
+  fetchSoccerNews(query);
+  curSelectedNav?.classList.remove("active");
+  curSelectedNav = null;
+});

@@ -305,6 +305,63 @@ header .search-bar-container button:hover {
     background: var(--orange);
 }
 
+/* Styling for the PL, LALIGA, UCL, and Search button container */
+.news-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; /* Adjust margin as needed */
+}
+
+/* Styling for PL, LALIGA, UCL links */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.hover-link {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.hover-link:hover {
+    background-color: #ddd;
+}
+
+/* Styling for the Search input field */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.news-input {
+    width: 300px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    border-radius: 0.5rem;
+    border: 2px solid #bbb;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
 main{
     padding-block: 20px;
 }

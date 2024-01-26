@@ -80,7 +80,6 @@
     <!-- news section start-->
 
     <section class="news" id="news">
-
         <h1 class="heading">
             <span>l</span>
             <span>a</span>
@@ -94,8 +93,20 @@
             <span>w</span>
             <span>s</span>
         </h1>
-
+    
+        <div class="news-controls container flex">
+            <div class="nav-links flex">
+                <div class="hover-link nav-item" id="pl" onclick="onNavItemClick('PL')">PL</div>
+                <div class="hover-link nav-item" id="laliga" onclick="onNavItemClick('LALIGA')">LALIGA</div>
+                <div class="hover-link nav-item" id="ucl" onclick="onNavItemClick('UCL')">UCL</div>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
     </section>
+    
 
     <main>
         <div class="cards-container container flex" id="cards-container">
