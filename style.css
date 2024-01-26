@@ -467,19 +467,24 @@ main{
 .matches-container {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+    align-items: center; /* Centers the match cards within the container */
+    width: 100%; /* Takes the full width of its parent */
+    max-width: 600px; /* Adjust the max width as needed */
+    margin: auto; /* Center the container on the page */
 }
 
 .match-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
+    flex-direction: column; /* Stack the children of match-card vertically */
+    justify-content: center; /* Center the content vertically within the match-card */
+    align-items: center; /* Center the content horizontally within the match-card */
+    width: 100%; /* Match-card takes the full width of its parent */
+    margin-bottom: 20px; /* Space between each match-card */
     padding: 10px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    background: #fff; /* Background color for the card */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow effect for the card */
 }
+
 
 .teams {
     display: flex;
@@ -504,11 +509,13 @@ main{
 
 .match-info {
     text-align: right;
+    align-items: center;
 }
 
 .match-time {
     font-size: 16px; 
     margin-bottom: 5px;
+    align-items: center;
 }
 
 .match-status {
