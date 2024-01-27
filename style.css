@@ -467,22 +467,22 @@ main{
 .matches-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the match cards within the container */
-    width: 100%; /* Takes the full width of its parent */
-    max-width: 600px; /* Adjust the max width as needed */
-    margin: auto; /* Center the container on the page */
+    align-items: center; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto;
 }
 
 .match-card {
     display: flex;
-    flex-direction: column; /* Stack the children of match-card vertically */
-    justify-content: center; /* Center the content vertically within the match-card */
-    align-items: center; /* Center the content horizontally within the match-card */
-    width: 100%; /* Match-card takes the full width of its parent */
-    margin-bottom: 20px; /* Space between each match-card */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 20px; 
     padding: 10px;
-    background: #fff; /* Background color for the card */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow effect for the card */
+    background: #fff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 
@@ -528,5 +528,13 @@ main{
 
 .match-status.live {
     background-color: #4CAF50; 
+}
+
+
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
