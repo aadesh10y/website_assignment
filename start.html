@@ -22,6 +22,8 @@
             <a href="#contact">Contact</a>
         </nav>
 
+
+
         <div class="icons">
             <button aria-label="Search" id="search-btn" class="search-icon"><i class="fas fa-search"></i></button>
 
@@ -32,20 +34,50 @@
             <input type="search" id="search-bar" placeholder="Search here..." class="cancel-symbol">
             <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
         </form>
+
+       
     </header>
 
+    <div class="send-message-container">
+        <p class="send-message" style="display: none">Message sent!</p>
+    </div>
+   
+    
+
     <div class="login-form-container">
+
+        <!-- Added codes -->
+       <div class="messages">
+            <p class="login-message" style="display : none">Logged In Successfully</p>
+            <p class="register-message" style="display : none">Registered Successfully</p>
+        </div>
+        <!-- upto here -->
+
         <i class="fas fa-times" id="form-close"></i>
-        <form action="">
+
+       
+        <form id="login-form" action="">
+          
+
             <h3>login</h3>
-            <input type="email" class="box" placeholder="enter your email">
-            <input type="password" class="box" placeholder="enter your password">
-            <input type="submit" value="login now" class="btn">
+            <input type="email" class="box" placeholder="Email">
+            <input type="password" class="box" placeholder="Password">
+            <input type="submit" value="login now" class="btn login-button">
             <input type="checkbox" id="remember">
             <label for="remember">remember me</label>
             <p>forget password? <a href="#">click here</a></p>
-            <p>don't have an account? <a href="#">register now</a></p>
+            <p>don't have an account? <a class="register-now-link" href="#">register now</a></p>
 
+        </form>
+
+        <form id="register-form" style="display: none">
+            <h3>Register</h3>
+            <input type="text" class="box" placeholder="Full Name">
+            <input type="email" class="box" placeholder="Email">
+            <input type="password" class="box" placeholder="Password">
+            <input type="password" class="box" placeholder="Confirm Password">
+            <input type="submit" value="Register now" class="btn register-now-button">
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
         </form>
     </div>
 
@@ -57,7 +89,6 @@
         <div class="content">
             <h3>The home of football</h3>
             <p>Football that you never experinced before</p>
-            <a href="#" class="btn">discover more</a>
         </div>
 
         <div class="controls">
@@ -258,9 +289,28 @@
 
     <!-- Matches section end here  -->
 
+    <!-- stats section starts here -->
+
+    <section class="stats" id="stats">
+        <h1 class="heading">
+            <span>s</span>
+            <span>t</span>
+            <span>a</span>
+            <span>t</span>
+            <span>s</span>
+        </h1>
+        <h2>Epl</h2>
+        <h2>LaLiga</h2>
+        <h2>Bundesliga</h2>
+        <h2>Serie A</h2>
+        <h2>Ligue 1</h2>
+    </section>
+
+    <!-- stats section ends here -->
+
     <!-- contact section start here -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h1 class="heading">
             <span>c</span>
             <span>o</span>
@@ -286,7 +336,7 @@
                     <input type="text" placeholder="subject">
                 </div>
                 <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" class="btn" value="send message">
+                <input type="submit" class="btn send-message-button" value="send message">
             </form>
         </div>
             
@@ -302,23 +352,23 @@
 
             <div class="box">
                 <h3>about us</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti facere quidem corrupti, excepturi ea optio tempore dolor. Ipsam accusantium necessitatibus quos explicabo a natus voluptate distinctio at enim, dicta obcaecati.</p>
+                <p>A home for all the football fans around the globe</p>
             </div>
 
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#">home</a>
-                <a href="#">news</a>
-                <a href="#">matches</a>
-                <a href="#">stats</a>
-                <a href="#">contact</a>
+                <a href="#home">home</a>
+                <a href="#news">news</a>
+                <a href="#matches">matches</a>
+                <a href="#stats">stats</a>
+                <a href="#contact">contact</a>
             </div>
             <div class="box">
                 <h3>follow us</h3>
-                <a href="#">facebook</a>
-                <a href="#">instagram</a>
-                <a href="#">twitter</a>
-                <a href="#">linkedin</a>
+                <a href="https://www.facebook.com/profile.php?id=100085295929690">facebook</a>
+                <a href="https://www.instagram.com/aadesh10y?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">instagram</a>
+                <a href="https://twitter.com/aadesh10y">twitter</a>
+                <a href="https://www.linkedin.com/in/aadesh-paudel-860270278/">linkedin</a>
             </div>
         </div>
 
